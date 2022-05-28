@@ -29,3 +29,28 @@ let b = 0;
 // Postfix increment (i++) increments, but returns the old value (i.e. the value before the increment).
 console.log(b++, 'Postfix increment'); //result 0
 console.log(b) // result 1
+
+function getDrinkByProfession(param){
+  param = param.toLowerCase();
+  switch (param) {
+    case "jabroni":
+      return "Patron Tequila"
+    case "school counselor":
+      return "Anything with Alcohol"
+    case "programmer":
+      return 	"Hipster Craft Beer"
+    case "bike gang member":
+      return "Moonshine"
+    case "politician":
+      return "Your tax dollars"
+    case "rapper":
+      return "Cristal"
+    default:
+      return "Beer"
+  }
+}
+
+// Default works as else in IF Statement
+console.log(getDrinkByProfession("jabrOni"))
+console.log(getDrinkByProfession("pundit"))
+console.log(getDrinkByProfession("rapper"))
