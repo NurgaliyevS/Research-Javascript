@@ -61,4 +61,20 @@ function openOrSenior(data){
   return result.map((el) => el)
 }
 
-console.log(openOrSenior([[45, 12],[55,21],[19, -2],[104, 20]]))
+// console.log(openOrSenior([[45, 12],[55,21],[19, -2],[104, 20]]))
+
+function descending (numbers) {
+  // in descending order
+  const num = numbers.sort((a, b) => b - a);
+  return num
+}
+
+function ascending (numbers) {
+  // in ascending  order
+  const num = numbers.sort((a, b) => a - b);
+  return num
+}
+
+
+console.log(descending([10,14,2,23,19]))
+console.log(ascending([1,2,3,4,6,-1,2]))
