@@ -51,6 +51,14 @@ function getDrinkByProfession(param){
 }
 
 // Default works as else in IF Statement
-console.log(getDrinkByProfession("jabrOni"))
-console.log(getDrinkByProfession("pundit"))
-console.log(getDrinkByProfession("rapper"))
+// console.log(getDrinkByProfession("jabrOni"))
+// console.log(getDrinkByProfession("pundit"))
+// console.log(getDrinkByProfession("rapper"))
+
+function openOrSenior(data){
+  // combine into one level without nesting
+  let result = [].concat.apply([], data)
+  return result.map((el) => el)
+}
+
+console.log(openOrSenior([[45, 12],[55,21],[19, -2],[104, 20]]))
