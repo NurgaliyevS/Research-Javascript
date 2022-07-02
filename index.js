@@ -21,14 +21,14 @@ const lenArray = mapForEach(strArray, function(item){
 let i = 0;
 
 // Prefix increment (++i) increments, and returns the new, incremented value;
-console.log(++i, 'Prefix increment'); // result is 1
-console.log(i); // result 1
+// console.log(++i, 'Prefix increment'); // result is 1
+// console.log(i); // result 1
 
 let b = 0;
 
 // Postfix increment (i++) increments, but returns the old value (i.e. the value before the increment).
-console.log(b++, 'Postfix increment'); //result 0
-console.log(b) // result 1
+// console.log(b++, 'Postfix increment'); //result 0
+// console.log(b) // result 1
 
 function getDrinkByProfession(param){
   param = param.toLowerCase();
@@ -55,26 +55,59 @@ function getDrinkByProfession(param){
 // console.log(getDrinkByProfession("pundit"))
 // console.log(getDrinkByProfession("rapper"))
 
-function openOrSenior(data){
-  // combine into one level without nesting
-  let result = [].concat.apply([], data)
-  return result.map((el) => el)
-}
+// function openOrSenior(data){
+//   // combine into one level without nesting
+//   let result = [].concat.apply([], data)
+//   return result.map((el) => el)
+// }
 
 // console.log(openOrSenior([[45, 12],[55,21],[19, -2],[104, 20]]))
 
-function descending (numbers) {
-  // in descending order
-  const num = numbers.sort((a, b) => b - a);
-  return num
+// function descending (numbers) {
+//   // in descending order
+//   const num = numbers.sort((a, b) => b - a);
+//   return num
+// }
+
+// function ascending (numbers) {
+//   // in ascending  order
+//   const num = numbers.sort((a, b) => a - b);
+//   return num
+// }
+
+// const video = {
+//   title : 'a',
+//   play() {
+//   console.log (this)
+// }
+// };
+
+// {title: 'a', play: ƒ}
+
+// video.play()
+
+// video.stop = function () {
+//   console.log(this)
+// }
+
+// {title: 'a', play: ƒ, stop: ƒ}
+
+// video.stop()
+
+
+// function playVideo () {
+//   console.log (this);
+// }
+
+// Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+
+// playVideo()
+
+function video (title ) {
+  this.title = title;
+  console.log (this) ; 
 }
 
-function ascending (numbers) {
-  // in ascending  order
-  const num = numbers.sort((a, b) => a - b);
-  return num
-}
+// video {title: 'a'}
 
-
-console.log(descending([10,14,2,23,19]))
-console.log(ascending([1,2,3,4,6,-1,2]))
+// const v = new video("a");
